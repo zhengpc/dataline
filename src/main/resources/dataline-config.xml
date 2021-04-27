@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+       default-autowire="byName">
+
+    <!-- DataLine门面服务 -->
+    <bean name="dataLineFacadeService" class="com.alibaba.china.cntools.dataline.service.DataLineFacadeServiceImpl" />
+
+    <!-- 插件发现&注册 -->
+    <bean name="dataLinePluginPostProcessor" class="com.alibaba.china.cntools.dataline.spring.DataLinePluginPostProcessor" />
+
+</beans>
